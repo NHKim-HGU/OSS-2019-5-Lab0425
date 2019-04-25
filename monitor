@@ -14,7 +14,7 @@ do
 				echo $cur
 				prev=$cur
 			else
-				echo "Spoiler"
+				echo "Spoiler Aler!"
 				prev=$cur
 			fi
 		fi

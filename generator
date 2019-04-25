@@ -9,14 +9,14 @@ SPOILER="I watched Avengers: Endgame."
 
 while ((1))
 do
-	if [[ $start != $SECONDS ]]
+	if [[ $start != $SECONDS && $((SECONDS%2)) -eq 0 ]]
 	then
 		echo "$SECONDS"
 		echo >> log.txt "$SECONDS"
 		start=$SECONDS
 		
 		RAND=$RANDOM
-		if [[ $((RAND%2)) -eq 0 ]]
+		if [[ $((RAND%3)) -eq 0 ]]
 		then
 			echo $SPOILER
 			echo >> log.txt "$SPOILER"
