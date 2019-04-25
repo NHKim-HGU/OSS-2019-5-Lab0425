@@ -1,6 +1,6 @@
 #!/bin/bash
 
-prev=a
+prev=nk
 
 while ((1))
 do
@@ -9,8 +9,14 @@ do
 		cur=$( tail -n 1 log.txt )
 		if [[ $cur != $prev ]] 
 		then
-			echo $cur
-			prev=$cur
+			if [[ $cur =~ ^[0-9]+$  ]]
+			then
+				echo $cur
+				prev=$cur
+			else
+				echo "Spoiler"
+				prev=$cur
+			fi
 		fi
 	fi
 done

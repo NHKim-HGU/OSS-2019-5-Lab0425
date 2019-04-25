@@ -16,7 +16,7 @@ do
 		start=$SECONDS
 		
 		RAND=$RANDOM
-		if [[ $((RAND%3)) -eq 0 ]]
+		if [[ $((RAND%2)) -eq 0 ]]
 		then
 			echo $SPOILER
 			echo >> log.txt "$SPOILER"
