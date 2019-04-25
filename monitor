@@ -12,11 +12,10 @@ do
 			if [[ $cur =~ ^[0-9]+$  ]]
 			then
 				echo $cur
-				prev=$cur
 			else
 				echo "Spoiler Aler!"
-				prev=$cur
 			fi
+			prev=$cur
 		fi
 	fi
 done
